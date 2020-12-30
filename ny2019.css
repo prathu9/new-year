@@ -1,0 +1,177 @@
+*{
+    margin:0;
+    box-sizing:border-box;
+}
+
+html{
+    width:100%;
+    height:100%;
+}
+
+body {
+    width:100%;
+    height:100%;
+    background-color:#000;
+    overflow:hidden;
+}
+
+.overlay{
+    width:100%;
+    height:100%;
+    position:absolute;
+    background-image:url("images/stars.png");
+    background-repeat:no-repeat;
+    background-size:cover;
+    -webkit-background-size:cover;
+    background-position:center;
+    z-index:4;
+}
+
+.sun,
+.orbit{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:
+        translate(-50%,-50%);
+}
+
+.sun{
+    width:100px;
+    height:100px;
+    background-color:yellow;
+    background-image:radial-gradient(#fff,#E5F805);
+    border-radius:50%;
+    z-index:1;
+    animation:glow 1s infinite;
+}
+
+@keyframes glow{
+    0%{
+        box-shadow:
+            2px 2px 10px #fff,
+            -2px 2px 10px #fff,
+            2px -2px 10px #fff,
+            -2px -2px 10px #fff;
+    }
+    50%{
+        box-shadow:
+            5px 5px 10px #fff,
+            -5px 5px 10px #fff,
+            5px -5px 10px #fff,
+            -5px -5px 10px #fff;
+    }
+    100%{
+        box-shadow:
+            2px 2px 10px #fff,
+            -2px 2px 10px #fff,
+            2px -2px 10px #fff,
+            -2px -2px 10px #fff;
+    }
+}
+
+/*.sun img{
+    width:inherit;
+    height:inherit;
+    outline:none;
+    border:0;
+}*/
+
+.year{
+    position:absolute;
+    top:35%;
+    left:22%;
+    font-size:1.5em;
+    font-weight:800;
+    width:50px;
+    height:20px;
+    text-align:center;
+}
+
+.orbit{
+    width:400px;
+    height:400px;
+    background-color:#000;
+    animation:
+        revolve 2s 
+        ease-in-out;
+}
+
+.earth{
+    width:30px;
+    height:30px;
+    background-color:blue;
+    border-radius:50%;
+    position:absolute;
+    top:40px;
+    left:45%;
+}
+
+.earth img{
+    width:inherit;
+    height:inherit;
+    transform:rotateZ(-90deg);
+}
+
+.message{
+    position:absolute;
+    left:50%;
+    transform:
+          translate(-50%,-80px)
+          scale(0);
+    width:100px;
+    height:60px;
+    font-size:0.7em;
+    font-weight:900;
+    font-family:roboto, sans-serif;
+    text-align:center;
+    padding:10px 5px 5px 5px;
+    background-color:#fff;
+    animation:
+      scaleOut 0.5s
+      2.5s;
+    animation-fill-mode:
+      forwards;
+}
+
+.message:after{
+    content:"";
+    width:20px;
+    height:20px;
+    position:absolute;
+    top:80%;
+    left:50%;
+    background-color:#fff;
+    transform:
+       translateX(-50%)
+       rotateZ(45deg);
+    z-index:-1;
+}
+
+@keyframes revolve{
+    0%{
+        transform:
+        translate(-50%,-50%)
+        rotateZ(0);
+    }
+    100%{
+        transform:
+        translate(-50%,-50%)
+        rotateZ(360deg);
+    }
+}
+
+@keyframes scaleOut{
+    0%{
+        transform:
+          translate(-50%,-20px)
+          scale(0,0);
+    }
+    100%{
+        transform:
+          translate(-50%,-80px)
+          scale(1,1);
+          transform-origin:
+            center bottom;
+    }
+}
