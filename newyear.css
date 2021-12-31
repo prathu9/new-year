@@ -25,6 +25,28 @@ body {
     -webkit-background-size:cover;
     background-position:center;
     z-index:4;
+    animation: star-glow 1s infinite;
+}
+
+@keyframes star-glow{
+    0%{
+        filter:brightness(100%);
+    }
+    20%{
+        filter:brightness(75%);
+    }
+    40%{
+        filter:brightness(50%);
+    }
+    60%{
+        filter:brightness(50%);
+    }
+    80%{
+        filter:brightness(70%);
+    }
+    100%{
+        filter:brightness(100%);
+    }
 }
 
 .sun,
@@ -70,13 +92,6 @@ body {
     }
 }
 
-/*.sun img{
-    width:inherit;
-    height:inherit;
-    outline:none;
-    border:0;
-}*/
-
 .year{
     position:absolute;
     top:35%;
@@ -119,9 +134,9 @@ body {
     transform:
           translate(-50%,-80px)
           scale(0);
-    width:100px;
+    width:120px;
     height:60px;
-    font-size:0.7em;
+    font-size:0.9em;
     font-weight:900;
     font-family:roboto, sans-serif;
     text-align:center;
@@ -157,7 +172,7 @@ body {
     100%{
         transform:
         translate(-50%,-50%)
-        rotateZ(360deg);
+        rotateZ(-360deg);
     }
 }
 
@@ -175,3 +190,4 @@ body {
             center bottom;
     }
 }
+
