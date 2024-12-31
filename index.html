@@ -1,35 +1,39 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<title></title>
-	<link rel="stylesheet" type="text/css" href="newyear.css"/>
-    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
-    <meta name="viewport" content="width=device-width initial-scale=1.0">
-</head>
-<body>
-    <div class="space"> </div>
+  <head>
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="newyear.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto"
+      rel="stylesheet"
+    />
+    <meta name="viewport" content="width=device-width initial-scale=1.0" />
+  </head>
+  <body>
+    <div class="space fireworks"></div>
 
-	 <div class="sun">
-           <div class="year">
-               2021
-           </div>
+    <div class="sun">
+      <div class="year">2024</div>
+    </div>
+    <div class="orbit">
+      <div class="earth">
+        <div id="message" class="message">
+          Happy New Year
+          <span style="font-size: 20px">&#x1F60A;</span>
         </div>
-        <div class="orbit">
-            <div class="earth">
-            
-                <div
-                id="message"
-                class=
-                "message"
-                >
-                 Happy New Year 
-                 <span style="font-size:20px">&#x1F60A;</span>   
-                </div> 
-                <img id="earth-img" src="images\earth.png"/>     
-            </div>
-        </div>
+        <img id="earth-img" src="images\earth.png" />
+      </div>
+    </div>
 
-        <canvas id="canvas"></canvas>
-	<script src="newyear.js"></script>
-</body>
+    <canvas id="canvas"></canvas>
+    <script src="https://cdn.jsdelivr.net/npm/@tsparticles/confetti@3.0.3/tsparticles.confetti.bundle.min.js"></script>
+    <!-- jsDelivr  -->
+    <script src="https://cdn.jsdelivr.net/npm/fireworks-js@2.x/dist/index.umd.js"></script>
+
+    <!-- UNPKG -->
+    <script src="https://unpkg.com/fireworks-js@2.x/dist/index.umd.js"></script>
+    <script src="newyear.js"></script>
+    <script src="fireworks.js"></script>
+    <script src="confetti-firework.js"></script>
+  </body>
 </html>
